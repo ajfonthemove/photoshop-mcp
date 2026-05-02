@@ -56,7 +56,7 @@ return JSON.stringify({__error:true,message:String(e.message||e),line:e.line||0}
     });
   } else {
     // macOS: use AppleScript
-    const appleScript = `tell application "Adobe Photoshop" to do javascript (read POSIX file "${tmpFile}")`;
+    const appleScript = `tell application "Adobe Photoshop 2026" to do javascript (read POSIX file "${tmpFile}")`;
     proc = Bun.spawn(["osascript", "-e", appleScript], {
       stdout: "pipe",
       stderr: "pipe",
